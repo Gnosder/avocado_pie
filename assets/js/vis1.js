@@ -16,7 +16,7 @@ function vis1() {
     // Creating an SVG wrapper and appending an SVG group that will hold the chart,
     // and shift the latter by left and top margins.
     var svg = d3
-    .select(".row")
+    .select(".plot")
     .append("svg")
     .attr("width", svgWidth)
     .attr("height", svgHeight);
