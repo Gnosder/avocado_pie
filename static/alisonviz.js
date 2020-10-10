@@ -7,7 +7,7 @@ function viz2(){
       var data = importedData;
       // Sort the data array using the total volume value
       data.sort(function(a, b) {
-        return parseFloat(b.year) - parseFloat(a.year);
+        return parseFloat(b.Year) - parseFloat(a.Year);
       });
   
   
@@ -16,18 +16,18 @@ function viz2(){
   
       // Trace1 bar plot 
       var trace1 = {
-        x: data.map(row => row.year),
+        x: data.map(row => row.Year),
         y: data.map(row => row.PLU4046),
-        text: data.map(row => row.year),
+        text: data.map(row => row.Year),
         name: "HassSmall",
         type: "bar"
       };
   
       // Trace2 line plot 
       var trace2 = {
-        x: data.map(row => row.year),
+        x: data.map(row => row.Year),
         y: data.map(row => row.PLU4225),
-        text: data.map(row => row.year),
+        text: data.map(row => row.Year),
         name: "HassLarge",
         type: "bar",
         // orientation: "h"
@@ -35,10 +35,10 @@ function viz2(){
   
       // Trace3 line plot 
       var trace3 = {
-        x: data.map(row => row.year),
+        x: data.map(row => row.Year),
         y: data.map(row => row.PLU4770),
-        text: data.map(row => row.year),
-        name: "HassAllSizes",
+        text: data.map(row => row.Year),
+        name: "HassXLarge",
         type: "bar",
         // orientation: "h"
       };
@@ -92,7 +92,7 @@ function viz2(){
         },
         yaxis: {
           title: {
-            text: '# of Avocados Sold',
+            text: '# of Avocados Sold by Size',
             font: {
               family: 'Courier New, monospace',
               size: 18,
