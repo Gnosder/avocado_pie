@@ -10,11 +10,9 @@ function pageChange(value) {
     } else if (value === "Scatter") {
         vis1();
     } else if (value === "Line") {
-        test1();        
-    } else if (value === "Disabled") {
+        viz2();        
+    } else if (value === "Chart JS") {
         vis3();        
-    } else if (value === "Heatmap") {
-        test3();
     }
 };
 
@@ -30,36 +28,11 @@ function vis3() {
     d3.select(".plot")
         .append("div")
         .attr("class", "chart-container")
-        .attr("style", "position:relative;height:40vh;width:80vw")
+        .attr("style", "background-color:white")
         .append("canvas")
         .attr("id", "chartjs");
-    chartjs
+    chartjs()
     
-};
-
-function img1() {
-    d3.select(".plot")
-        .append("img")
-        .attr("src", "../assets/images/300px-Buddy_christ.jpg")
-        .attr("class", "img-fluid")
-        .attr("height", h)
-
-};
-
-function img2() {
-    d3.select(".plot")
-        .append("img")
-        .attr("src", "../assets/images/ugandan-knuckles.jpg")
-        .attr("class", "img-fluid")
-        .attr("height", h)
-}
-
-function img3() {
-    d3.select(".plot")
-        .append("img")
-        .attr("src", "../assets/images/Webp.net-resizeimage-27.jpg")
-        .attr("class", "img-fluid")
-        .attr("height", h)
 };
 
 function test1() {
@@ -69,24 +42,6 @@ function test1() {
     Plotly.newPlot("plot", data, layout);
 
 };
-
-function test2() {
-    var data = [{
-        values: ["10560823880", "5245673340", "414373301"],
-        labels: ["Small","Large","Extra Large"],
-        type: 'pie'
-    }];
-    var layout = {title: "Avocado Pie"};
-    Plotly.newPlot("plot", data, layout);
-};
-
-function test3() {
-    var data = [{type: 'densitymapbox', lon: [10, 20, 30], lat: [15, 25, 35], z: [1, 3, 2]}];
-
-    var layout = {mapbox: {style: 'stamen-terrain'}};
-
-    Plotly.newPlot('plot', data, layout);
-}
 
 // Page Change Listener
 d3.selectAll("a.nav-item.nav-link").on("click", function() {

@@ -19,7 +19,7 @@ function chartjs() {
 
     // Build a getData();...complete.
     async function getData() {
-        const response = await fetch('../data/avocado_cleaned.csv')
+        const response = await fetch('../assets/data/avocado_cleaned.csv')
         const data = await response.text()
 
         const table = data.split('\n').slice(1)
