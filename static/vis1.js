@@ -1,7 +1,7 @@
 function vis1() {
 
 // Setting up width and height of chart 800 ans 500
-var svgWidth = 950;
+var svgWidth = 815;
 var svgHeight = 500;
 
 var margin = {
