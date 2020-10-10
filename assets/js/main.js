@@ -6,7 +6,7 @@ function pageChange(value) {
     if (value === "Home") {
         home();
     } else if (value === "Scatter") {
-        test1();
+        vis1();
     } else if (value === "Line") {
         test2();        
     } else if (value === "Disabled") {
