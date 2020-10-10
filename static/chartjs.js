@@ -1,8 +1,93 @@
 function chartjs() {    
     // Reading in data...complete.
-    d3.csv('../assets/data/avocado_cleaned.csv').then(function (avoData) {})
-    // })
-    // })
+    d3.json('/avocadoData').then(function (avoData) {
+    // Getting loopy to turn columns into callable lists...complete.
+    avoData.forEach((day) => {
+        Object.entries(day).forEach(([key, value]) => {
+            if (key === "Date") {
+                dates.push(value);
+            }
+        })
+    })
+    avoData.forEach((price) => {
+        Object.entries(price).forEach(([key, value]) => {
+            if (key === "Average_price") {
+                avgprice.sort().push("$" + value);
+            }
+        })
+    })
+    avoData.forEach((volume) => {
+        Object.entries(volume).forEach(([key, value]) => {
+            if (key === "Total_volume") {
+                ttlvol.push(value);
+            }
+        })
+    })
+    avoData.forEach((small) => {
+        Object.entries(small).forEach(([key, value]) => {
+            if (key === "PLU4046") {
+                hasssm.push(value);
+            }
+        })
+    })
+    avoData.forEach((large) => {
+        Object.entries(large).forEach(([key, value]) => {
+            if (key === "PLU4225") {
+                hasslg.push(value);
+            }
+        })
+    })
+    avoData.forEach((all) => {
+        Object.entries(all).forEach(([key, value]) => {
+            if (key === "PLU4770") {
+                hassall.push(value);
+            }
+        })
+    })
+    avoData.forEach((bag) => {
+        Object.entries(bag).forEach(([key, value]) => {
+            if (key === "Total_bags") {
+                ttlbags.push(value);
+            }
+        })
+    })
+    avoData.forEach((smallbag) => {
+        Object.entries(smallbag).forEach(([key, value]) => {
+            if (key === "Small_bags") {
+                smbags.push(value);
+            }
+        })
+    })
+    avoData.forEach((largebag) => {
+        Object.entries(largebag).forEach(([key, value]) => {
+            if (key === "Larg_bags") {
+                lgbags.push(value);
+            }
+        })
+    })
+    avoData.forEach((xlargebag) => {
+        Object.entries(xlargebag).forEach(([key, value]) => {
+            if (key === "XLarge_bags") {
+                xlbags.push(value);
+            }
+        })
+    })
+    avoData.forEach((anyo) => {
+        Object.entries(anyo).forEach(([key, value]) => {
+            if (key === "Year") {
+                yr.push(value);
+            }
+        })
+    })
+    avoData.forEach((reg) => {
+        Object.entries(reg).forEach(([key, value]) => {
+            if (key === "Region") {
+                reg.push(value);
+    }
+    }
+    )
+})})
+}
     // Global Variables
     var dates = []
     var avgprice = []
@@ -16,44 +101,45 @@ function chartjs() {
     var lgbags = []
     var xlbags = []
     var yr = []
+    var reg = []
 
     // Build a getData();...complete.
-    async function getData() {
-        const response = await fetch('../assets/data/avocado_cleaned.csv')
-        const data = await response.text()
+    // async function getData() {
+    //     const response = await fetch('/avocadoData')
+    //     const data = await response.text()
 
-        const table = data.split('\n').slice(1)
-        table.forEach(row => {
-            const columns = row.split(',')
+    //     const table = data.split('\n').slice(1)
+    //     table.forEach(row => {
+    //         const columns = row.split(',')
 
-            var date = columns[0]
-            dates.push(date)
-            var averagePrice = columns[1];
-            avgprice.sort().push(averagePrice)
-            var totalVolume = columns[2];
-            ttlvol.push(totalVolume)
-            var hassSmall = columns[3];
-            hasssm.sort().push(hassSmall)
-            var hassLarge = columns[4];
-            hasslg.sort().push(hassLarge)
-            var hassAllSizes = columns[5];
-            hassall.push(hassAllSizes)
-            var totalBags = columns[6];
-            ttlbags.push(totalBags)
-            var smallBags = columns[7];
-            smbags.push(smallBags)
-            var largeBags = columns[8];
-            lgbags.push(largeBags)
-            var xLargeBags = columns[9];
-            xlbags.push(xLargeBags)
-            var year = columns[11];
-            yr.sort().push(year)
-        })
-    }
+    //         var date = columns[0]
+    //         dates.push(date)
+    //         var averagePrice = columns[1];
+    //         avgprice.sort().push(averagePrice)
+    //         var totalVolume = columns[2];
+    //         ttlvol.push(totalVolume)
+    //         var hassSmall = columns[3];
+    //         hasssm.sort().push(hassSmall)
+    //         var hassLarge = columns[4];
+    //         hasslg.sort().push(hassLarge)
+    //         var hassAllSizes = columns[5];
+    //         hassall.push(hassAllSizes)
+    //         var totalBags = columns[6];
+    //         ttlbags.push(totalBags)
+    //         var smallBags = columns[7];
+    //         smbags.push(smallBags)
+    //         var largeBags = columns[8];
+    //         lgbags.push(largeBags)
+    //         var xLargeBags = columns[9];
+    //         xlbags.push(xLargeBags)
+    //         var year = columns[11];
+    //         yr.sort().push(year)
+    //     })
+    // }
     // Charting the universe...complete.
     chartIt();
     async function chartIt() {
-        await getData();
+        // await getData();
         var ctx = document.getElementById('chartjs');
         var chartjs = new Chart(ctx, {
             type: 'line',
@@ -109,4 +195,3 @@ function chartjs() {
             }
         })
     }
-}
