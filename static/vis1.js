@@ -106,7 +106,7 @@ function vis1() {
         data.Small_Medium_Avocado = +data.PLU4046;
         data.Large_Avocado = +data.PLU4225;
         data.Average_price = +data.Average_price;
-        console.log(data)
+        // console.log(data)
         });
 
         // xLinearScale function above csv import
