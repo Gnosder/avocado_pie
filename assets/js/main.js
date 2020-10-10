@@ -20,7 +20,7 @@ function pageChange(value) {
 function home() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "assets/images/avocado.jpg")
+        .attr("src", "../assets/images/avocado.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 };
@@ -28,7 +28,7 @@ function home() {
 function img1() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "assets/images/300px-Buddy_christ.jpg")
+        .attr("src", "../assets/images/300px-Buddy_christ.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 
@@ -37,7 +37,7 @@ function img1() {
 function img2() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "assets/images/ugandan-knuckles.jpg")
+        .attr("src", "../assets/images/ugandan-knuckles.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 }
@@ -45,7 +45,7 @@ function img2() {
 function img3() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "assets/images/Webp.net-resizeimage-27.jpg")
+        .attr("src", "../assets/images/Webp.net-resizeimage-27.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 };
