@@ -11,13 +11,13 @@
 }
 
 .bodyPat {
-    background-color: var(--color1);
+    background-color: white;
 }
 
 .borderPat {
     border-width: thick;
     border-style: solid;
-    border-color: var(--color2);
+    border-color: var(--color1);
     border-radius: 5px;
     margin: 5px;
     box-shadow: 5px 5px 5px var(--color3);
