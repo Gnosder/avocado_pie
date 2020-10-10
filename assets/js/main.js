@@ -25,14 +25,14 @@ function home() {
         .attr("height", h)
 };
 
-function vis1() {
-    d3.select(".plot")
-        .append("img")
-        .attr("src", "assets/images/300px-Buddy_christ.jpg")
-        .attr("class", "img-fluid")
-        .attr("height", h)
+// function vis1() {
+//     d3.select(".plot")
+//         .append("img")
+//         .attr("src", "assets/images/300px-Buddy_christ.jpg")
+//         .attr("class", "img-fluid")
+//         .attr("height", h)
 
-};
+// };
 
 function vis2() {
     d3.select(".plot")
