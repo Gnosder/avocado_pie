@@ -11,16 +11,13 @@ function viz2(){
       });
   
   
-      // Slice the first 100 objects for plotting
-      // data = data.slice(0, 500);
-  
       // Reverse the array due to Plotly's defaults
       data = data.reverse();
   
       // Trace1 bar plot 
       var trace1 = {
         x: data.map(row => row.year),
-        y: data.map(row => row.HassSmall),
+        y: data.map(row => row.PLU4046),
         text: data.map(row => row.year),
         name: "HassSmall",
         type: "bar"
@@ -29,7 +26,7 @@ function viz2(){
       // Trace2 line plot 
       var trace2 = {
         x: data.map(row => row.year),
-        y: data.map(row => row.HassLarge),
+        y: data.map(row => row.PLU4225),
         text: data.map(row => row.year),
         name: "HassLarge",
         type: "bar",
@@ -39,7 +36,7 @@ function viz2(){
       // Trace3 line plot 
       var trace3 = {
         x: data.map(row => row.year),
-        y: data.map(row => row.HassAllSizes),
+        y: data.map(row => row.PLU4770),
         text: data.map(row => row.year),
         name: "HassAllSizes",
         type: "bar",
