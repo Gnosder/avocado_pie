@@ -3,15 +3,16 @@ const h = "900px";
 function pageChange(value) {
     d3.select(".plot img").remove();
     d3.select(".plot svg").remove();
+    d3.select(".chart-container").remove();
     Plotly.purge("plot");
     if (value === "Home") {
         home();
     } else if (value === "Scatter") {
         vis1();
     } else if (value === "Line") {
-        viz2();        
+        test1();        
     } else if (value === "Disabled") {
-        test2();        
+        vis3();        
     } else if (value === "Heatmap") {
         test3();
     }
@@ -23,6 +24,17 @@ function home() {
         .attr("src", "../assets/images/avocado.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
+};
+
+function vis3() {
+    d3.select(".plot")
+        .append("div")
+        .attr("class", "chart-container")
+        .attr("style", "position:relative;height:40vh;width:80vw")
+        .append("canvas")
+        .attr("id", "chartjs");
+    chartjs
+    
 };
 
 function img1() {

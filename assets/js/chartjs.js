@@ -1,6 +1,6 @@
 function chartjs() {    
     // Reading in data...complete.
-    d3.csv('assets/data/avocado_cleaned.csv').then(function (avoData) {})
+    d3.csv('../assets/data/avocado_cleaned.csv').then(function (avoData) {})
     // })
     // })
     // Global Variables
@@ -19,7 +19,7 @@ function chartjs() {
 
     // Build a getData();...complete.
     async function getData() {
-        const response = await fetch('data/avocado_cleaned.csv')
+        const response = await fetch('../data/avocado_cleaned.csv')
         const data = await response.text()
 
         const table = data.split('\n').slice(1)
