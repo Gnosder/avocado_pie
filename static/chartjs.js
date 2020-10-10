@@ -15,14 +15,14 @@ function chartjs() {
     var lgbags = []
     var xlbags = []
     var yr = []
-    console.log(avoData);
+    // console.log(avoData);
     // Build a getData();...complete.
-    async function getData(avoData) {
-        const response = await fetch('/avocadoData')
+    // async function getData(avoData) {
+        // const response = await fetch('/avocadoData')
         response = avoData;
         // const data = await response.text();
             console.log(response);
-        const table = data.split('\n').slice(1)
+        const table = response.split('\n').slice(1)
         table.forEach(row => {
             const columns = row.split(',')
 
@@ -49,7 +49,7 @@ function chartjs() {
             var Year = columns[11];
             yr.sort().push(Year)
         })
-    }
+    //}
     // Charting the universe...complete.
     chartIt();
     async function chartIt() {
