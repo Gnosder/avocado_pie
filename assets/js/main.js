@@ -2,6 +2,7 @@ const h = "900px";
 
 function pageChange(value) {
     d3.select(".plot img").remove();
+    d3.select(".plot svg").remove();
     Plotly.purge("plot");
     if (value === "Home") {
         home();
