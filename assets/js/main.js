@@ -9,43 +9,43 @@ function pageChange(value) {
     } else if (value === "Scatter") {
         vis1();
     } else if (value === "Line") {
-        test2();        
+        viz2();        
     } else if (value === "Disabled") {
-        test3();        
+        test2();        
     } else if (value === "Heatmap") {
-        vis3();
+        test3();
     }
 };
 
 function home() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "assets/images/avocado.jpg")
+        .attr("src", "../assets/images/avocado.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 };
 
-// function vis1() {
-//     d3.select(".plot")
-//         .append("img")
-//         .attr("src", "assets/images/300px-Buddy_christ.jpg")
-//         .attr("class", "img-fluid")
-//         .attr("height", h)
-
-// };
-
-function vis2() {
+function img1() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "assets/images/ugandan-knuckles.jpg")
+        .attr("src", "../assets/images/300px-Buddy_christ.jpg")
+        .attr("class", "img-fluid")
+        .attr("height", h)
+
+};
+
+function img2() {
+    d3.select(".plot")
+        .append("img")
+        .attr("src", "../assets/images/ugandan-knuckles.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 }
 
-function vis3() {
+function img3() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "assets/images/Webp.net-resizeimage-27.jpg")
+        .attr("src", "../assets/images/Webp.net-resizeimage-27.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 };
@@ -71,7 +71,7 @@ function test2() {
 function test3() {
     var data = [{type: 'densitymapbox', lon: [10, 20, 30], lat: [15, 25, 35], z: [1, 3, 2]}];
 
-    var layout = {width: 600, height: 400, mapbox: {style: 'stamen-terrain'}};
+    var layout = {mapbox: {style: 'stamen-terrain'}};
 
     Plotly.newPlot('plot', data, layout);
 }

@@ -2,8 +2,8 @@ function viz2(){
     //-----------------------------------------------------------------
     // Use D3 fetch to read the JSON file
     // The data from the JSON file is arbitrarily named importedData as the argument
-    d3.json("../data/greenData.json").then((importedData) => {
-      console.log(importedData);
+    d3.json("../assets/data/greenData.json").then((importedData) => {
+      // console.log(importedData);
       var data = importedData;
       // Sort the data array using the total volume value
       data.sort(function(a, b) {
