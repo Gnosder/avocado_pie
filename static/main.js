@@ -9,7 +9,7 @@ function pageChange(value) {
         home();
     } else if (value === "Scatter") {
         vis1();
-    } else if (value === "Line") {
+    } else if (value === "Bar") {
         viz2();        
     } else if (value === "Chart JS") {
         vis3();        
