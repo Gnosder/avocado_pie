@@ -19,7 +19,7 @@ function pageChange(value) {
 function home() {
     d3.select(".plot")
         .append("img")
-        .attr("src", "../assets/images/avocado.jpg")
+        .attr("src", "../static/avocado.jpg")
         .attr("class", "img-fluid")
         .attr("height", h)
 };
