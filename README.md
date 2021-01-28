@@ -1,5 +1,16 @@
-# Avocado millennials 
+<h1 align="center">Avocado Pie </h1>
+<p align="center"> A data driven look at avocado sales from 2015-2018.</p>
+
+
+###
+<img src="static/avocado.jpg" align="center"/>
 Us Millennials LOVE avocados! So we decided to analyze some avocado trends in the U.S. 
+
+# Contributors
+Ryan Little
+Alison Litton
+Patrick Plaisted
+Amanda Plesa
 
 # Data information 
 The data was compiled into a csv file from kaggle https://www.kaggle.com/neuromusic/avocado-prices which was downloaded from the Hass avocado board website https://hassavocadoboard.com/happenings/. 
